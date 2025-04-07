@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, TreePine } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar: React.FC = () => {
@@ -33,8 +33,9 @@ const Navbar: React.FC = () => {
     )}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-xl md:text-2xl font-bold text-yoga-navy">
-            Holistic<span className="text-yoga-terracotta">Yoga</span>
+          <a href="#" className="text-xl md:text-2xl font-bold text-yoga-navy flex items-center">
+            <TreePine className="h-7 w-7 mr-2 text-yoga-sage" />
+            <span>Trauma <span className="text-yoga-terracotta">Free Tree</span></span>
           </a>
 
           <div className="hidden md:flex space-x-8">

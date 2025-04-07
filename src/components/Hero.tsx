@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, TreePine } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -16,9 +16,13 @@ const Hero: React.FC = () => {
       <div className="container mx-auto z-10">
         <div className="max-w-2xl mx-auto text-center">
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="flex justify-center mb-6">
+              <TreePine className="h-20 w-20 text-yoga-sage" />
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yoga-navy leading-tight mb-6">
-              Holistic Education <br />
-              <span className="text-yoga-terracotta">through Mindful Practice</span>
+              Trauma Free Tree <br />
+              <span className="text-yoga-terracotta">Holistic Education</span>
             </h1>
             
             <p className="text-lg md:text-xl text-yoga-navy/80 mb-8">
@@ -46,6 +50,14 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Decorative elements */}
+      <div className="absolute left-10 top-1/4 hidden lg:block animate-float">
+        <TreePine className="h-16 w-16 text-yoga-sage/60" />
+      </div>
+      <div className="absolute right-10 top-1/3 hidden lg:block animate-float" style={{ animationDelay: '1s' }}>
+        <TreePine className="h-12 w-12 text-yoga-sage/60" />
       </div>
 
       {/* Decorative wave */}
