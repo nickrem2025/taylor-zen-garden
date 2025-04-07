@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, TreePine } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -17,9 +20,11 @@ const Navbar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   return <nav className={cn('fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4', scrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent')}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -30,7 +35,7 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="nav-link">About</a>
-            <a href="#philosophy" className="nav-link">Calendar</a>
+            <a href="#calendar" className="nav-link">Calendar</a>
             <a href="#programs" className="nav-link">Programs</a>
             <a href="#teachers" className="nav-link">Teachers</a>
             <a href="#contact" className="nav-link">Contact</a>
@@ -47,7 +52,7 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
             <a href="#about" className="nav-link py-2" onClick={toggleMenu}>About</a>
-            <a href="#philosophy" className="nav-link py-2" onClick={toggleMenu}>Philosophy</a>
+            <a href="#calendar" className="nav-link py-2" onClick={toggleMenu}>Calendar</a>
             <a href="#programs" className="nav-link py-2" onClick={toggleMenu}>Programs</a>
             <a href="#teachers" className="nav-link py-2" onClick={toggleMenu}>Teachers</a>
             <a href="#contact" className="nav-link py-2" onClick={toggleMenu}>Contact</a>
@@ -56,4 +61,5 @@ const Navbar: React.FC = () => {
       </div>
     </nav>;
 };
+
 export default Navbar;
