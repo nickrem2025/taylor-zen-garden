@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { TreeDeciduous } from 'lucide-react';
-
 const About: React.FC = () => {
-  return (
-    <section id="about" className="py-20 px-4 bg-white">
+  return <section id="about" className="py-20 px-4 bg-white">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -20,11 +17,7 @@ const About: React.FC = () => {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden shadow-xl h-[400px]">
-              <img 
-                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Trees in a forest" 
-                className="w-full h-full object-cover"
-              />
+              <img alt="Trees in a forest" className="w-full h-full object-cover" src="/lovable-uploads/5d67f662-3503-408b-ab56-e91c87f70804.png" />
             </div>
             
             <div className="space-y-6">
@@ -34,22 +27,16 @@ const About: React.FC = () => {
                 integrates traditional academic excellence with mindfulness practices, physical 
                 wellness, and emotional intelligence.
               </p>
-              <p className="text-yoga-navy/80">
-                Just as trees grow strong with proper care, we've created a supportive environment where students develop not just knowledge, 
-                but wisdom; not just skills, but purpose; not just credentials, but character.
-              </p>
-              <Button 
-                className="mt-4 bg-yoga-sage hover:bg-yoga-sage/90 text-white rounded-full" 
-                asChild
-              >
+              <p className="text-yoga-navy/80">We all have stress.  We all feel scared and alone.  What you do with those feelings is what matters.  Life is difficult when you don't have the tools and skills to manage your tough moments.  There is a way to walk through the bad with grace and strength and gather more joy and peace.  Let's do it together and have an amazing journey.
+
+            </p>
+              <Button className="mt-4 bg-yoga-sage hover:bg-yoga-sage/90 text-white rounded-full" asChild>
                 <a href="#philosophy">Learn Our Philosophy</a>
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
